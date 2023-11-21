@@ -7,21 +7,22 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
 import BottomStack from './src/screens/BottomStack';
+
 const Stack = createStackNavigator();
+
 function getHeaderTitle(route) {
-  // If the focused route is not found, we need to assume it's the initial screen
-  // This can happen during if there hasn't been any navigation inside the screen
-  // In our case, it's "Feed" as that's the first screen inside the navigator
   const routeName = getFocusedRouteNameFromRoute(route) ?? 'Home';
+
   switch (routeName) {
     case 'Home':
-      return 'Home';
+    return 'Home';
     case 'Product':
-      return 'Produto';
+    return 'Produto';
     case 'ProductList':
-      return 'Produtos Cadastrados';
+    return 'Produtos Cadastrados';
   }
 }
+
 export default function App() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#FEF3B4' }}>
@@ -41,10 +42,10 @@ export default function App() {
               headerTitleStyle: { fontWeight: 'bold', textAlign: 'center' },
             }}
           />
-          <Stack.Screen 
-          name="Register"
-          component={Register}
-          options={{ title: 'Cadastre-se' }}
+          <Stack.Screen
+            name="Register"
+            component={Register}
+            options={{ title: 'Cadastre-se' }}
           />
           <Stack.Screen
             name="BottomStack"
