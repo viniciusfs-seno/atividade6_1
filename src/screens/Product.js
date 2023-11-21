@@ -11,6 +11,7 @@ export default function Product({ navigation }) {
     const handleChangeText = (key, value) => {
         setState({ ...state, [key]: value });
     }
+
     async function handleSave() {
         if (!state.productName || !state.productPrice || !state.productQty) {
             Alert.alert(

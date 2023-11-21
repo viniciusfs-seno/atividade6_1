@@ -44,6 +44,7 @@ export default function BottomStack({ navigation, route }) {
         </Tab.Navigator>
     );
 }
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
